@@ -29,6 +29,6 @@ function operate(num1, op, num2) {
 
 const display = document.querySelector('#display');
 const display_init = document.createElement('p');
-display_init.textContent = 1230;
+display_init.textContent = 0;
 display.append(display_init);
 let display_val;
