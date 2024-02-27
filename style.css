@@ -1,0 +1,56 @@
+/* General */
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    text-align: center;
+    margin: 75px 0;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+}
+
+/* Special */
+
+
+
+/* Responsiveness */
+
+@media screen and (min-width: 900px) {
+
+}
+
+@media screen and (max-width: 899px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
