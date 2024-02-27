@@ -28,13 +28,13 @@ function operate(num1, op, num2) {
 }
 
 function to_display(num) {
-    display_val = num;
+    display_val += num;
     display_content.textContent = display_val;
     display.append(display_content);
 }
 
 const display = document.querySelector('#display');
 const display_content = document.createElement('p');
-display_content.textContent = 0;
+display_content.textContent = '0';
 display.append(display_content);
-let display_val;
+let display_val = '';
