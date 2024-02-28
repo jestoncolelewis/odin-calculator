@@ -29,6 +29,7 @@ function operate(num1, op, num2) {
             to_display(divide(num1, num2));
             break;
     }
+    display_val = '';
 }
 
 function to_display(num) {
@@ -38,16 +39,25 @@ function to_display(num) {
 }
 
 function operand(name) {
-    num1 = display_val;
+    num1 = Number(display_val);
     op = name;
     display_val = '';
 }
 
 const display = document.querySelector('#display');
 const display_content = document.createElement('p');
-display_content.textContent = '0';
-display.append(display_content);
+const equals = document.querySelector('#eql');
+
 let display_val = '';
 let num1 = 0;
 let num2 = 0;
 let op = '';
+
+display_content.textContent = '0';
+display.append(display_content);
+
+equals.onclick = () => {
+    num2 = Number(display_val);
+    display_val = '';
+    operate(num1, op, num2);
+}
