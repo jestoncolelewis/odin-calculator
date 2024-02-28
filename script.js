@@ -44,9 +44,18 @@ function operand(name) {
     display_val = '';
 }
 
+function wipe() {
+    num1 = 0;
+    num2 = 0;
+    op = '';
+    display_content.textContent = '0';
+    display.append(display_content);
+}
+
 const display = document.querySelector('#display');
 const display_content = document.createElement('p');
 const equals = document.querySelector('#eql');
+const clear = document.querySelector('#clr');
 
 let display_val = '';
 let num1 = 0;
@@ -61,3 +70,4 @@ equals.onclick = () => {
     display_val = '';
     operate(num1, op, num2);
 }
+clear.onclick = () => {wipe()};
