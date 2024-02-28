@@ -38,3 +38,11 @@ const display_content = document.createElement('p');
 display_content.textContent = '0';
 display.append(display_content);
 let display_val = '';
+
+// push operand button
+    // store current display value as num1
+    // store operand type as op
+    // create new display value
+
+// push equals button
+// run operate()
