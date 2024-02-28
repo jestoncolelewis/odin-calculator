@@ -37,16 +37,17 @@ function to_display(num) {
     display.append(display_content);
 }
 
+function operand(name) {
+    num1 = display_val;
+    op = name;
+    display_val = '';
+}
+
 const display = document.querySelector('#display');
 const display_content = document.createElement('p');
 display_content.textContent = '0';
 display.append(display_content);
 let display_val = '';
-
-// push operand button
-    // store current display value as num1
-    // store operand type as op
-    // create new display value
-
-// push equals button
-// run operate()
+let num1 = 0;
+let num2 = 0;
+let op = '';
