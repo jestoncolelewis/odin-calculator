@@ -77,6 +77,10 @@ button {
     border: none;
 }
 
+.ops {
+    background-color: blueviolet;
+}
+
 /* Responsiveness */
 
 @media screen and (min-width: 900px) {
