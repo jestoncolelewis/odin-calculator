@@ -15,21 +15,25 @@ function divide(num1, num2) {
 }
 
 function operate(num1, op, num2) {
+    let result = 0;
     switch (op) {
         case 'add':
-            to_display(add(num1, num2));
+            result = add(num1, num2);
             break;
         case 'subtract':
-            to_display(subtract(num1, num2));
+            result = subtract(num1, num2);
             break;
         case 'multiply':
-            to_display(multiply(num1, num2));
+            result = multiply(num1, num2);
             break;
         case 'divide':
-            to_display(divide(num1, num2));
+            result = divide(num1, num2);
             break;
     }
     display_val = '';
+    to_display(String(result));
+
+    return result;
 }
 
 function to_display(num) {
@@ -39,7 +43,14 @@ function to_display(num) {
 }
 
 function operand(name) {
-    num1 = Number(display_val);
+    if (eql === 0) {
+        num1 = Number(display_val);
+        eql = 1;
+    } else {
+        num2 = Number(display_val);
+        display_val = '';
+        num1 = operate(num1, op, num2);
+    }
     op = name;
     display_val = '';
 }
@@ -47,6 +58,7 @@ function operand(name) {
 function wipe() {
     num1 = 0;
     num2 = 0;
+    eql = 0;
     op = '';
     display_content.textContent = '0';
     display.append(display_content);
@@ -61,6 +73,7 @@ let display_val = '';
 let num1 = 0;
 let num2 = 0;
 let op = '';
+let eql = 0;
 
 display_content.textContent = '0';
 display.append(display_content);
@@ -69,5 +82,7 @@ equals.onclick = () => {
     num2 = Number(display_val);
     display_val = '';
     operate(num1, op, num2);
+    eql = 0;
+    display_val = '';
 }
 clear.onclick = () => {wipe()};
